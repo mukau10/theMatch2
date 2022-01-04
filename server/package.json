@@ -1,0 +1,31 @@
+{
+  "name": "thematch_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elie Mukau Ambel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-openid-connect": "^2.5.1",
+    "express-session": "^1.17.2",
+    "http-proxy-middleware": "^2.0.1",
+    "mysql": "^2.18.1",
+    "oauth20-provider": "^0.6.0",
+    "path": "^0.12.7",
+    "react-native-dotenv": "^3.3.1",
+    "session": "^0.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
