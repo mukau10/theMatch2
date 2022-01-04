@@ -1,0 +1,12 @@
+.click-button {
+  background-color: pink;
+  color: black;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.click-button:hover {
+  background-color: palevioletred;
+  color: white;
+  cursor: pointer;
+}

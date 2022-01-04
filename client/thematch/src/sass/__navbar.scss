@@ -1,0 +1,43 @@
+.navigationBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  background-color: pink;
+  width: 100vw;
+}
+.navigation-links {
+  width: 90%;
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    li {
+      border-bottom: 2px solid black;
+      padding-bottom: 10px;
+      text-align: center;
+      margin: 0px 20px 0px 20px;
+      color: black !important;
+      font-size: 18px;
+      text-transform: uppercase;
+      :hover {
+        color: white !important;
+        padding-bottom: 10px;
+        border-bottom: 2px solid white;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+.navbar-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+.navbar-image {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+}

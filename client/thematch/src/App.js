@@ -12,23 +12,56 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 export default function App() {
   return (
     <Router>
-      <ul>
-        <li>
-          <Link to="/">Matching</Link>
-        </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/register">Register</Link>
-        </li>
-        <li>
-          <Link to="/all-users">All Users</Link>
-        </li>
-        <li>
-          <Link to="/users/:id">User</Link>
-        </li>
-      </ul>
+      <div className="navigationBar">
+        <div className="navigation-links">
+        <ul>
+          <li>
+            <Link to="/" style={{ color: "black", textDecoration: "none" }}>
+              Matching
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/login"
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              Login
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/register"
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              Register
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/all-users"
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              All Users
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/users/:id"
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              User
+            </Link>
+          </li>
+        </ul>
+
+        </div>
+        <div className="navbar-avatar">
+          <Link to="/users/:id">
+            <img className="navbar-image" src={require('./ronaldinho.jpg')}/>
+          </Link>
+        </div>
+      </div>
+
       <Routes>
         <Route exact path="/" element={<MatchingComponent />} />
         <Route exact path="/login" element={<LoginComponent />} />
