@@ -16,6 +16,7 @@ router.post("/", (req, res) => {
       }
       else{
         res.send(result)
+        console.log("Logged in")
       }
     }
   );

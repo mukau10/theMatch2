@@ -6,6 +6,7 @@ import RegisterComponent from "./views/RegisterComponent";
 import AllUsersComponent from "./views/AllUsersComponent";
 import FindOneUserComponent from "./views/FindOneUserComponent";
 import MatchingComponent from "./views/MatchingComponent";
+import RegisterProfile from "./views/RegisterProfile";
 
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
@@ -52,6 +53,14 @@ export default function App() {
               User
             </Link>
           </li>
+          <li>
+            <Link
+              to="/create-profile"
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              Create Profile
+            </Link>
+          </li>
         </ul>
 
         </div>
@@ -68,6 +77,8 @@ export default function App() {
         <Route exact path="/register" element={<RegisterComponent />} />
         <Route exact path="/all-users" element={<AllUsersComponent />} />
         <Route exact path="/user/:id" element={<FindOneUserComponent />} />
+        <Route exact path="/create-profile" element={<RegisterProfile />} />
+
       </Routes>
     </Router>
   );

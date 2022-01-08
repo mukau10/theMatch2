@@ -16,4 +16,18 @@ router.post("/", (req, res) => {
     );
 });
 
+router.post("/profile", (req, res) => {
+  const { firstName, lastName, age, gender, email, profileImage } = req.body;
+  db.query(
+    `INSERT into profiles (firstName, lastName, age, gender, email, profileImage) values ("${firstName}", "${lastName}", "${age}", "${gender}", "${email}", "${profileImage}")`,
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log("inserted \n: " + JSON.stringify(result));
+    }
+  );
+});
+
+
 module.exports = router;
