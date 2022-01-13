@@ -98,7 +98,7 @@ export default function RegisterProfile() {
         <div className="uploadImage">
           <input
             type="file"
-            accept="image/png, image/gif, image/jpeg, image/jpg"
+            accept="image/png, image/gif, image/jpeg, image/jpg, image/webp"
             onChange={(e) => setUploadedImage(e.target.files[0])}
           />
           <div className="uploadImage__buttons">

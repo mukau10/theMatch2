@@ -34,13 +34,13 @@ app.use(
 
 const getUsersData = require('./routes/show-user');
 const registerUser = require('./routes/register');
-const homeServer = require('./routes/home');
+const usersServer = require('./routes/users');
 const loginRoute = require('./routes/login');
 
 app.use('/show-user', getUsersData);
 app.use('/login',loginRoute);
 app.use('/register',registerUser);
-app.use('/',homeServer);
+app.use('/users',usersServer);
 
 app.listen(PORT, () => {
   console.log(`The Match listening at http://localhost:${PORT}`);

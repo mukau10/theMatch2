@@ -6,7 +6,9 @@ const path = require("path");
 const fs = require("fs");
 
 router.get("/", (req, res) => {
-  res.send("Hello server");
+  db.query('SELECT * FROM profiles', (err, results)=>{
+    res.send(results);
+  })
 });
 
 
