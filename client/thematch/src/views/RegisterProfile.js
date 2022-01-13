@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import "../sass/utils.scss";
+import Select from "react-select";
 
 export default function RegisterProfile() {
   const [firstName, setFirstName] = useState("");
@@ -12,6 +13,11 @@ export default function RegisterProfile() {
   const [profileImage, setProfileImage] = useState("");
   const [uploadedImage, setUploadedImage] = useState({});
   const [imageBase64, setImageBase64] = useState("");
+  const genders = [
+    { value: "Male", label: "Male" },
+    { value: "Female", label: "Female" },
+    { value: "Other", label: "Other" },
+  ];
 
   function convertBase64(file) {
     return new Promise((resolve, reject) => {
@@ -90,10 +96,10 @@ export default function RegisterProfile() {
           placeholder="E-mail"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <input
-          type="text"
-          placeholder="Gender"
-          onChange={(e) => setGender(e.target.value)}
+        <Select onInputChange={{}}
+        placeholder="Gender"
+          options={genders}
+          onChange={selectedOption => {setGender(selectedOption.value)}}
         />
         <div className="uploadImage">
           <input
